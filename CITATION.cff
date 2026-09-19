@@ -1,0 +1,44 @@
+cff-version: 1.2.0
+
+message: >
+  If you use BCRA in research, software, experiments, or derivative work,
+  please cite this repository and the corresponding archived release.
+
+title: "BCRA: Bio-Connectome Recurrent Architecture"
+
+type: software
+
+version: "1.0.0"
+
+date-released: 2026-09-19
+
+authors:
+  - family-names: "YOUR_LAST_NAME"
+    given-names: "YOUR_FIRST_NAME"
+
+repository-code: "https://github.com/Sm0r3s-source/BCRA"
+
+url: "https://github.com/Sm0r3s-source/BCRA"
+
+license: Apache-2.0
+
+keywords:
+  - artificial intelligence
+  - recurrent neural networks
+  - connectomics
+  - biological neural networks
+  - neuroAI
+  - reservoir computing
+  - computational neuroscience
+  - FlyWire
+  - temporal memory
+  - bio-inspired computing
+
+abstract: >
+  BCRA (Bio-Connectome Recurrent Architecture) is a recurrent artificial
+  intelligence architecture constructed from a biological connectome.
+  BCRA v1 investigates whether a large real biological connectivity graph
+  can function as a recurrent computational substrate and how topology
+  and recurrent dynamics influence temporal computation. BCRA v1.0.0
+  defines two validated operating regimes: BCRA-Native and
+  BCRA-Relaxed10.
