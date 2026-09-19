@@ -1,0 +1,97 @@
+{
+  "name": "BCRA",
+  "long_name": "Bio-Connectome Recurrent Architecture",
+  "version": "1.0.0",
+  "status": "FROZEN",
+  "frozen_at_utc": "2026-09-19T17:07:28.117995Z",
+  "spec": {
+    "name": "BCRA",
+    "long_name": "Bio-Connectome Recurrent Architecture",
+    "version": "1.0.0",
+    "status": "FROZEN",
+    "flywire_snapshot": "783",
+    "expected_neurons": 138584,
+    "expected_directed_edges": 3732460,
+    "matrix_orientation": "W[post, pre]",
+    "edge_magnitude": "log1p(synapse_count)",
+    "neurotransmitter_sign_policy": "provisional BCRA v1 sign policy retained from validated experiments",
+    "biological_weight_scale": 0.5,
+    "max_abs_edge_weight": 8.0,
+    "dynamics": "globally_uniform_leaky_tanh",
+    "leak": 0.25,
+    "recurrent_gain": 0.01,
+    "self_memory": 0.75,
+    "recurrent_core_trainable": false,
+    "task_encoder_trainable": true,
+    "task_readout_trainable": true,
+    "native_regime": "BCRA-Native",
+    "relaxed_regime": "BCRA-Relaxed10",
+    "relaxed_fraction": 0.1,
+    "relaxed_transform": "select 10% of directed edge records and permute destinations; preserve selected destination multiset pre-coalesce",
+    "release_seed": 20260919
+  },
+  "graph": {
+    "neurons": 138584,
+    "directed_edge_records": 3732460,
+    "native_sparse_nnz": 3732460,
+    "relaxed10_sparse_nnz": 3731409
+  },
+  "relaxed10_reference": {
+    "seed": 20260919,
+    "requested_fraction": 0.1,
+    "selected_edge_records": 373246,
+    "selected_fraction": 0.1,
+    "actual_changed_endpoint_fraction": 0.09999544536311172,
+    "selected_destination_multiset_preserved_pre_coalesce": true,
+    "nnz_after_coalesce": 3731409
+  },
+  "smoke_tests": {
+    "native": {
+      "shape": [
+        2,
+        12,
+        16
+      ],
+      "finite": true,
+      "absolute_sum": 0.0030879208352416754
+    },
+    "relaxed10": {
+      "shape": [
+        2,
+        12,
+        16
+      ],
+      "finite": true,
+      "absolute_sum": 0.003497373778373003
+    }
+  },
+  "freeze_checks": {
+    "version_is_1_0_0": true,
+    "status_frozen": true,
+    "snapshot_v783": true,
+    "neuron_count_exact": true,
+    "edge_count_exact": true,
+    "matrix_orientation_post_pre": true,
+    "biological_scale_0_5": true,
+    "leak_0_25": true,
+    "self_memory_0_75": true,
+    "gain_0_01": true,
+    "core_frozen": true,
+    "relaxed_fraction_0_10": true,
+    "relaxed_multiset_preserved": true,
+    "native_smoke_finite": true,
+    "relaxed10_smoke_finite": true
+  },
+  "artifacts": {
+    "bcra_v1_reference_config.json": {
+      "sha256": "1488c6c2947e1c3dad6c608f853faac22a0f8e02de07397663a7ac24ac57dcc3"
+    },
+    "bcra_v1_relaxed10_reference_patch.npz": {
+      "sha256": "ae0a3b6e93b153f8f50d9f4d38ddaac1cd69ebbf2a979b84d2d94f4ae6a82132"
+    },
+    "BCRA_v1_ARCHITECTURE.md": {
+      "sha256": "0ddd97b2acfbca55c3c597aada615d8f94b9d6cb6aa9f612dd34ad95ed554486"
+    }
+  },
+  "versioning_rule": "BCRA v1.0.0 is immutable. Architectural changes belong to BCRA v2 or a separately named experimental branch."
+}
